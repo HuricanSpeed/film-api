@@ -3,7 +3,7 @@ const request = require('request');
 const cheerio = require('cheerio');
 const router = express.Router();
 
-router.get(['/upcoming', '/upcoming/:month'], (req, res) => {
+router.get('/upcoming', (req, res) => {
     let month
     const months = ["January","February","March","April","May","June","July","August","September","October","November","December"];
     if(!req.params.month){
